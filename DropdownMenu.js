@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { DropdownStyled } from './DropdownStyled';
 
 const DropdownMenu = ({ dropdownItems, itemSelected, handleChange }) => {
@@ -25,4 +26,13 @@ const DropdownMenu = ({ dropdownItems, itemSelected, handleChange }) => {
 };
 export default DropdownMenu;
 
+DropdownMenu.proptype = {
+  dropdownItems: PropTypes.array,
+  handleChange: PropTypes.func,
+  itemSelected: PropTypes.string
+}
+DropdownMenu.defaultProps = {
+  handleChange: () => {},
+  dropdownItems: []
+}
 

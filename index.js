@@ -13,7 +13,7 @@ class App extends Component {
       name: "React",
       displayMenu: false,
       dropdownItems: ["One", "Two", "Three", "Four", "Five", "Six", "One", "Two", "Three", "Four", "Five", "Six","One", "Two", "Three", "Four", "Five", "Six", "One", "Two", "Three", "Four", "Five", "Six"],
-      itemSelected: "Two"
+      itemSelected: ""
     };
   }
 

@@ -9,7 +9,6 @@ export const DropdownStyled = styled.div`
     font-wight: bold;
     color: black;
     padding: 0.6em 1.4em 0.5em 0.8em;
-    min-width: 50%;
     max-width: 100%;
     box-sizing: border-box;
     margin: 0;
