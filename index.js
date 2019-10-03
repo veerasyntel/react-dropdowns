@@ -1,18 +1,42 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-import Hello from "./Hello";
 import "./style.css";
 
 import Dropdown from "./Dropdown";
 import DropdownMenu from "./DropdownMenu";
+import DatePickerComp from './DatePickerComp';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      name: "React",
       displayMenu: false,
-      dropdownItems: ["One", "Two", "Three", "Four", "Five", "Six", "One", "Two", "Three", "Four", "Five", "Six","One", "Two", "Three", "Four", "Five", "Six", "One", "Two", "Three", "Four", "Five", "Six"],
+      dropdownItems: [
+        "One",
+        "Two",
+        "Three",
+        "Four",
+        "Five",
+        "Six",
+        "One",
+        "Two",
+        "Three",
+        "Four",
+        "Five",
+        "Six",
+        "One",
+        "Two",
+        "Three",
+        "Four",
+        "Five",
+        "Six",
+        "One",
+        "Two",
+        "Three",
+        "Four",
+        "Five",
+        "Six"
+      ],
       itemSelected: ""
     };
   }
@@ -41,6 +65,7 @@ class App extends Component {
           itemSelected={itemSelected}
           handleChange={this.handleChange}
         />
+        <DatePickerComp />
       </div>
     );
   }
