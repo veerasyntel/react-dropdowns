@@ -1,34 +1,49 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
-import Hello from './Hello';
-import './style.css';
+import React, { Component } from "react";
+import { render } from "react-dom";
+import Hello from "./Hello";
+import "./style.css";
 
-import Dropdown from './Dropdown';
+import Dropdown from "./Dropdown";
+import DropdownMenu from "./DropdownMenu";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      name: 'React',
-      displayMenu: false
+      name: "React",
+      displayMenu: false,
+      dropdownItems: ["One", "Two", "Three", "Four", "Five", "Six", "One", "Two", "Three", "Four", "Five", "Six","One", "Two", "Three", "Four", "Five", "Six", "One", "Two", "Three", "Four", "Five", "Six"],
+      itemSelected: "Two"
     };
   }
-  
+
   showDropdownMenu = () => {
-    this.setState({displayMenu: !this.state.displayMenu});   
+    this.setState({ displayMenu: !this.state.displayMenu });
+  };
+  handleChange = e => {
+    this.setState({ itemSelected: e.target.value });
   };
 
   render() {
-    const {displayMenu} = this.state;
+    const { displayMenu, dropdownItems, itemSelected } = this.state;
+    // return (
+    //   <div>
+    //     <Dropdown
+    //       displayMenu={displayMenu}
+    //       showDropdownMenu={this.showDropdownMenu}
+    //     />
+    //   </div>
+    // );
     return (
       <div>
-       <Dropdown 
-          displayMenu={displayMenu}
-          showDropdownMenu={this.showDropdownMenu}
-        />       
+        <DropdownMenu
+          dropdownItems={dropdownItems}
+          itemSelected={itemSelected}
+          handleChange={this.handleChange}
+        />
       </div>
     );
   }
 }
 
-render(<App />, document.getElementById('root'));
+render(<App />, document.getElementById("root"));
