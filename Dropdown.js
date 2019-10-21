@@ -5,7 +5,7 @@ const Dropdown = ({ showDropdownMenu, displayMenu }) => {
   return (
     <div className="dropdown">
       <div className="button" onClick={showDropdownMenu}>
-        Display Numbers
+        Show Hide
       </div>
       { displayMenu ? (
         <ul>
